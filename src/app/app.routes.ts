@@ -11,4 +11,11 @@ export const routes: Routes = [
     loadComponent: () =>
       import('../app/pages/map/map.component').then((c) => c.MapComponent),
   },
+  {
+    path: 'map-tmp',
+    loadComponent: () =>
+      import('../app/pages/map/map-tmp/map-tmp.component').then(
+        (c) => c.MapTmpComponent
+      ),
+  },
 ];

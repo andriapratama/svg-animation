@@ -23,3 +23,47 @@
 .bounce {
   animation: bounce 2s;
 }
+
+@keyframes tilt-shaking {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(0eg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.shake {
+  animation: tilt-shaking 1s infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+.scale {
+  transition-duration: 2000ms;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.matrix-tree-2 {
+  transform: matrix(2.7786, 0.036327, -0.007803, 2.77913, -74.8344, 29.7366);
+  transform-origin: 325.55px 221.072px;
+}
+
+.matrix-tree-5 {
+  transform: matrix(2.79392, -0.017511, 0.017511, 2.79392, 157.603, -25.0424);
+  transform-origin: 93px 279.402px;
+}
+
+.matrix-tree-6 {
+  transform: matrix(1.98799, 0, 0, 1.98457, -283.652, -181.589);
+}
