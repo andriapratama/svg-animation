@@ -33,7 +33,6 @@ export class HomeComponent {
   }
 
   onMouseEnter() {
-    this.isButtonActive = true;
     this.renderer.addClass(
       this.buttonElement.nativeElement,
       '-translate-y-[12px]'
@@ -42,16 +41,12 @@ export class HomeComponent {
       this.buttonElement.nativeElement,
       'animate-fade-up'
     );
-    setTimeout(() => {
-      this.renderer.removeClass(this.buttonElement.nativeElement, 'paused');
-      this.renderer.addClass(
-        this.buttonElement.nativeElement,
-        'animate-fade-down'
-      );
-    }, 50);
+    this.renderer.addClass(
+      this.buttonElement.nativeElement,
+      'animate-fade-down'
+    );
   }
   onMouseLeave() {
-    this.isButtonActive = false;
     this.renderer.removeClass(
       this.buttonElement.nativeElement,
       '-translate-y-[12px]'
@@ -60,11 +55,6 @@ export class HomeComponent {
       this.buttonElement.nativeElement,
       'animate-fade-down'
     );
-    setTimeout(() => {
-      this.renderer.addClass(
-        this.buttonElement.nativeElement,
-        'animate-fade-up'
-      );
-    }, 50);
+    this.renderer.addClass(this.buttonElement.nativeElement, 'animate-fade-up');
   }
 }
