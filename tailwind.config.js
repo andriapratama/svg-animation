@@ -4,19 +4,32 @@ module.exports = {
   theme: {
     extend: {
       keyframes: {
-        litleBounce: {
-          "0%, 100%": {
-            transform: "translateY(0)",
-            animationTimingFunction: "cubic-bezier(0.8, 0, 1, 1)",
+        fadeUp: {
+          "20%, 60%, 100%": {
+            transform: "translateY(-12px)",
           },
-          "50%": {
-            transform: "translateY(-30px)",
-            animationTimingFunction: "cubic-bezier(0, 0, 0.2, 1)",
+          "40%": {
+            transform: "translateY(-8px)",
+          },
+          "80%": {
+            transform: "translateY(-10px)",
+          },
+        },
+        fadeDown: {
+          "20%, 60%, 100%": {
+            transform: "translateY(0px)",
+          },
+          "40%": {
+            transform: "translateY(-4px)",
+          },
+          "80%": {
+            transform: "translateY(-2px)",
           },
         },
       },
       animation: {
-        "litle-bounce": "litleBounce 2s infinite",
+        "fade-up": "fadeUp 1s ease-out forwards",
+        "fade-down": "fadeDown 1s ease-out forwards",
       },
     },
   },

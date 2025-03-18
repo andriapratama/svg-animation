@@ -1,13 +1,19 @@
-<div class="relative w-full h-screen overflow-hidden">
-  <div
-    class="bg-white relative w-full h-screen flex items-center justify-center"
+<div
+  class="relative w-full h-screen overflow-hidden flex items-center justify-center"
+>
+  <button
+    type="button"
+    class="group w-[150px] h-[50px] bg-black rounded-full relative"
+    (mouseenter)="onMouseEnter()"
+    (mouseleave)="onMouseLeave()"
   >
-    <button
-      type="button"
-      class="px-40 py-10 flex items-center justify-center bg-blue-800 rounded-full overflow-hidden relative after:absolute after:top-1/2 after:-translate-y-1/2 after:left-1/2 after:-translate-x-1/2 after:w-[100vh] after:h-screen after:rounded-full after:scale-0 after:hover:scale-100 after:duration-300 after:ease-linear after:transition-all after:bg-pink-400"
-      (click)="toMap()"
+    <div
+      #button
+      class="w-[150px] h-[50px] bg-white relative rounded-full overflow-hidden border-[3px] border-black border-solid flex items-center justify-center -translate-y-[12px] after:absolute after:left-0 after:top-0 after:w-full after:h-full after:bg-gradient-to-r after:from-yellow-600 after:to-yellow-400 after:opacity-0 after:group-hover:opacity-100 after:duration-500 after:ease-out after:transition-all"
     >
-      <p class="text-white font-semibold text-2xl relative z-10">Click Here!</p>
-    </button>
-  </div>
+      <span class="font-black text-black text-[20px] relative z-10"
+        >SUBMIT</span
+      >
+    </div>
+  </button>
 </div>
