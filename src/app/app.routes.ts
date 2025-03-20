@@ -12,10 +12,10 @@ export const routes: Routes = [
       import('../app/pages/map/map.component').then((c) => c.MapComponent),
   },
   {
-    path: 'map-tmp',
+    path: 'timer',
     loadComponent: () =>
-      import('../app/pages/map/map-tmp/map-tmp.component').then(
-        (c) => c.MapTmpComponent
+      import('../app/pages/timer/timer.component').then(
+        (c) => c.TimerComponent
       ),
   },
 ];

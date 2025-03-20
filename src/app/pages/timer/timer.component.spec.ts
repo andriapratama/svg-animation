@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MapTmpComponent } from './map-tmp.component';
+import { TimerComponent } from './timer.component';
 
-describe('MapTmpComponent', () => {
-  let component: MapTmpComponent;
-  let fixture: ComponentFixture<MapTmpComponent>;
+describe('TimerComponent', () => {
+  let component: TimerComponent;
+  let fixture: ComponentFixture<TimerComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [MapTmpComponent]
+      imports: [TimerComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(MapTmpComponent);
+    fixture = TestBed.createComponent(TimerComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

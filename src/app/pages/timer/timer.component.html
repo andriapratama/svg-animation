@@ -1,0 +1,29 @@
+<div
+  class="w-[150px] h-[50px] rounded-full bg-blue-900/80 flex items-center justify-center"
+>
+  <p class="font-semibold text-white text-[30px] flex items-center gap-[2px]">
+    <span class="w-[34px] text-center"> {{ minutes | number : "2.0" }}</span>
+    :
+    <span class="w-[34px] text-center">{{ seconds | number : "2.0" }}</span>
+    :
+    <span class="w-[34px] text-center">{{
+      milliseconds | number : "2.0"
+    }}</span>
+  </p>
+</div>
+
+<button
+  type="button"
+  class="w-[150px] h-[50px] rounded-full bg-green-500 flex items-center justify-center mt-10"
+  (click)="startTimer()"
+>
+  <span class="text-[25px] font-bold text-white">Start</span>
+</button>
+
+<button
+  type="button"
+  class="w-[150px] h-[50px] rounded-full bg-red-500 flex items-center justify-center mt-10"
+  (click)="stopTimer()"
+>
+  <span class="text-[25px] font-bold text-white">Stop</span>
+</button>
